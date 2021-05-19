@@ -13,7 +13,11 @@
   </head>
 
   <body>
-    <h1> RR - Your Restaurant Rating Site</h1>
-    <%= yield %>
+    <div class="navbar bg-light px-4">
+      <%= link_to "RR - Your Restaurant Rating Site", restaurants_path, class: "navbar-brand" %>
+    </div>
+    <div class = container>
+      <%= yield %>
+    <div>
   </body>
 </html>

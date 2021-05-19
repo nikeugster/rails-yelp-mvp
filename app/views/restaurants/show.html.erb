@@ -1,8 +1,10 @@
-<h2><%= @restaurant.name %></h2>
+<div class="pt-4">
+  <h2><%= @restaurant.name %></h2>
+<div>
 <p>Style: <%= @restaurant.category %></br>
 Address: <%= @restaurant.address %></br>
 Phone number: <%= @restaurant.phone_number %></p>
-<h3>Ratings:</h3>
+<h4>Ratings:</h4>
 <%= link_to "Add a rating", new_restaurant_review_path(@restaurant) %>
 <ul>
   <% @restaurant.reviews.each do |review| %>
@@ -12,4 +14,6 @@ Phone number: <%= @restaurant.phone_number %></p>
   <% end %>
 </ul>
 <hr>
-<%= link_to "Back to all restaurants", restaurants_path %>
+<div class="pt-3">
+  <%= link_to "Back to all restaurants", restaurants_path, class: "navbar-nav", class: "btn btn-secondary" %>
+<div>
