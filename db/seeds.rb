@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Cleaning database..."
+Restaurant.destroy_all
+
 restaurants = [
   { name: "Fong Li", address: "23 Abbey Road, China Town", phone_number: "020 7420 5856", category: "chinese"},
   { name: "Luigis Pizza", address: "Kleiststrasse 8, Berlin", phone_number: "030 2165925", category: "italian"},
@@ -17,3 +20,5 @@ restaurants = [
 restaurants.each do |restaurant|
   Restaurant.create(name: restaurant[:name], address: restaurant[:address], phone_number: restaurant[:phone_number], category: restaurant[:category])
 end
+
+puts "Finished!"
